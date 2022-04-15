@@ -1,6 +1,6 @@
 import { Header } from './header';
 import { Navigation } from './navigation';
-import * as S from './styles'
+import * as S from './styles';
 
 interface IProps {
   children: React.ReactNode;

@@ -22,4 +22,4 @@ export const Main = styled('main')({
   gridArea: 'main',
 });
 
-export const Footer = styled('footer')({})
+export const Footer = styled('footer')({});
