@@ -1,6 +1,10 @@
+import { MainLayout } from './layouts/main';
+
 function App() {
   return (
-    <div />
+    <MainLayout>
+      <div>test</div>
+    </MainLayout>
   );
 }
 
