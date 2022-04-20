@@ -2,6 +2,7 @@ import { styled } from '@mui/system';
 
 export const Form = styled('form')({
   display: 'flex',
+  flexDirection: 'column',
   width: '100%',
 });
 
@@ -19,4 +20,9 @@ export const FormColumn = styled('div')({
 
 export const FormGroup = styled('div')({
   margin: '0 0 15px 0',
+});
+
+export const FormGroupSubmit = styled('div')({
+  display: 'flex',
+  jsutifyContent: 'flex-end'
 });

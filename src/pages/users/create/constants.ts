@@ -5,4 +5,6 @@ export const FORM_OBJECT_EMPTY: UserCreateFormObject = {
   lastName: '',
   email: '',
   phone: '',
+  birthdate: null,
+  about: '',
 };

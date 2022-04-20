@@ -11,8 +11,13 @@ export const useForm = () => {
     setFormObject({ ...formObject, [name]: value });
   };
 
+  const handleDateChange = (birthdate: Date | null) => {
+    setFormObject({ ...formObject, birthdate });
+  };
+
   return {
     formObject,
-    handleInputChange
+    handleInputChange,
+    handleDateChange
   };
 };

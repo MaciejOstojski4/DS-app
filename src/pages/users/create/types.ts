@@ -3,4 +3,6 @@ export interface UserCreateFormObject {
   lastName: string;
   email: string;
   phone: string;
+  about: string;
+  birthdate: Date | null;
 }
