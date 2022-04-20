@@ -4,5 +4,11 @@
   "Email": "Email",
   "About": "About",
   "Phone": "Phone",
-  "Birthdate": "Birthdate"
+  "Birthdate": "Birthdate",
+  "First name is required": "First name is required",
+  "Last name is required": "Last name is required",
+  "Email is required": "Email is required",
+  "About is required": "About is required",
+  "Birthdate is required": "Birthdate is required",
+  "Phone is required": "Phone is required"
 }

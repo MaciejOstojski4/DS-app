@@ -16,7 +16,11 @@ i18n
     lng: 'en',
     interpolation: {
       escapeValue: false
-    }
+    },
+    ns: [
+      'users'
+    ],
+    nsSeparator: ':',
   });
 
 export default i18n;
