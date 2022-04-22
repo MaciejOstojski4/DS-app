@@ -7,10 +7,14 @@ interface IProps {
 }
 
 export const MainLayout = ({ children }: IProps) => (
-  <S.Container>
-    <S.Header><Header /></S.Header>
-    <S.Navigation><Navigation /></S.Navigation>
-    <S.Main>{children}</S.Main>
-    <S.Footer></S.Footer>
-  </S.Container>
+  <S.Background>
+    <S.Container>
+      <S.Header><Header /></S.Header>
+      <S.Body>
+        <S.Main>{children}</S.Main>
+        <S.Navigation><Navigation /></S.Navigation>
+      </S.Body>
+      <S.Footer></S.Footer>
+    </S.Container>
+  </S.Background>
 );

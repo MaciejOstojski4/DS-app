@@ -1,25 +1,34 @@
 import { styled } from '@mui/system';
 
+export const Background = styled('div')(({ theme: { palette } }) => ({
+  backgroundColor: palette.grey[100],
+  minHeight: '100vh',
+}));
+
 export const Container = styled('div')({
   maxWidth: '1200px',
   margin: '0 auto',
-  display: 'grid',
-  gridTemplateRows: '80px auto',
-  gridTemplateColumns: '80% 20%',
-  gridTemplateAreas: '"header header" "main nav"',
+  display: 'flex',
+  flexDirection: 'column',
 });
 
 export const Header = styled('header')({
-  gridArea: 'header',
   padding: '15px 0',
+  height: '50px',
 });
 
-export const Navigation = styled('nav')({
-  gridArea: 'nav',
+export const Body = styled('div')({
+  display: 'flex',
 });
 
 export const Main = styled('main')({
-  gridArea: 'main',
+  width: '75%',
 });
+
+export const Navigation = styled('nav')({
+  width: '25%',
+  margin: '-50px 0 0 0',
+});
+
 
 export const Footer = styled('footer')({});
