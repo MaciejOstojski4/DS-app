@@ -10,7 +10,7 @@ export const validationSchema = yup.object().shape({
     .email(i18n.t('users:Email must be in valid format'))
     .required(i18n.t('users:Email is required')),
   phone: yup.string()
-    .matches(PHONE_REGEX, i18n.t('users:Phone must be in valid format'))
+    .matches(PHONE_REGEX)
     .required(i18n.t('users:Phone is required')),
   about: yup.string().required(i18n.t('users:About is required')),
   birthdate: yup
