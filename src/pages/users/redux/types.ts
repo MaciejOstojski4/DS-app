@@ -10,5 +10,5 @@ export interface User extends IEntity {
 }
 
 export interface UsersState {
-  users: User[];
+  user?: User;
 }

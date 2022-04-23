@@ -10,5 +10,6 @@
   "Email is required": "Email is required",
   "About is required": "About is required",
   "Birthdate is required": "Birthdate is required",
-  "Phone is required": "Phone is required"
+  "Phone is required": "Phone is required",
+  "Welcome": "Welcome {{firstName}}!"
 }

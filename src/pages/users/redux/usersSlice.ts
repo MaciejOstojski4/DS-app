@@ -3,20 +3,20 @@ import { CaseReducer, createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { User, UsersState } from './types';
 
 const initialState: UsersState = {
-  users: []
+  user: undefined,
 };
 
-const push: CaseReducer<UsersState, PayloadAction<User>> = (state, action) => {
-  state.users = [...state.users, action.payload];
+const userSetAction: CaseReducer<UsersState, PayloadAction<User>> = (state, action) => {
+  state.user = action.payload;
 };
 
 export const usersSlice = createSlice({
   name: 'users',
   initialState,
   reducers: {
-    push,
+    userSet: userSetAction,
   }
 });
 
-export const { push: usersPush } = usersSlice.actions;
+export const { userSet } = usersSlice.actions;
 export const { reducer: usersReducer } = usersSlice;

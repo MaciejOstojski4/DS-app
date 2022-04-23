@@ -9,26 +9,25 @@ export const Container = styled('div')({
   maxWidth: '1200px',
   margin: '0 auto',
   display: 'flex',
-  flexDirection: 'column',
 });
 
 export const Header = styled('header')({
-  padding: '15px 0',
-  height: '50px',
+  height: '66px',
+  width: '100%',
 });
 
 export const Body = styled('div')({
   display: 'flex',
+  flexDirection: 'column',
+  width: '80%',
 });
 
 export const Main = styled('main')({
-  width: '75%',
+  padding: '40px 0 0 0',
 });
 
 export const Navigation = styled('nav')({
-  width: '25%',
-  margin: '-50px 0 0 0',
+  width: '20%',
 });
-
 
 export const Footer = styled('footer')({});

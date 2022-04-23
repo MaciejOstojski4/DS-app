@@ -9,10 +9,10 @@ interface IProps {
 export const MainLayout = ({ children }: IProps) => (
   <S.Background>
     <S.Container>
-      <S.Header><Header /></S.Header>
+      <S.Navigation><Navigation /></S.Navigation>
       <S.Body>
+        <S.Header><Header /></S.Header>
         <S.Main>{children}</S.Main>
-        <S.Navigation><Navigation /></S.Navigation>
       </S.Body>
       <S.Footer></S.Footer>
     </S.Container>

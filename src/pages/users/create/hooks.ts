@@ -6,7 +6,7 @@ import { compile } from 'path-to-regexp';
 
 import { ValidationError } from '../../../utils/validation/types';
 import { validate } from '../../../utils/validation/validation';
-import { usersPush } from '../redux/usersSlice';
+import { userSet } from '../redux/usersSlice';
 import { FORM_OBJECT_EMPTY } from './constants';
 import { UserCreateFormObject } from './types';
 import { validationSchema } from './validation-schema';
@@ -35,7 +35,7 @@ export const useForm = () => {
     if (isValid) {
       setErrors([]);
       const id = shortid.generate();
-      dispatch(usersPush({ ...formObject, id }));
+      dispatch(userSet({ ...formObject, id }));
       navigate(compile(routes.users.show)({ id }));
     }
   };

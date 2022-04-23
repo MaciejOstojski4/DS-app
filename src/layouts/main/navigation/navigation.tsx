@@ -6,6 +6,7 @@ import { matchPath, useLocation } from 'react-router-dom';
 import * as S from './styles';
 import { Item } from './item';
 import { routes } from '../../../routing/routes';
+import { Logo } from './logo';
 
 export const Navigation = () => {
   const { t } = useTranslation('users');
@@ -18,18 +19,21 @@ export const Navigation = () => {
 
   return (
     <S.Navigation>
-      <Item
-        label={t('Create new user')}
-        to={createPath}
-        icon={faUserPlus}
-        isActive={isActive(createPath)}
-      />
-      <Item
-        label={t('My profile')}
-        to={compile(showPath)({ id: '1' })}
-        icon={faAddressCard}
-        isActive={isActive(showPath)}
-      />
+      <Logo />
+      <S.NavList>
+        <Item
+          label={t('Create new user')}
+          to={createPath}
+          icon={faUserPlus}
+          isActive={isActive(createPath)}
+        />
+        <Item
+          label={t('My profile')}
+          to={compile(showPath)({ id: '1' })}
+          icon={faAddressCard}
+          isActive={isActive(showPath)}
+        />
+      </S.NavList>
     </S.Navigation>
   );
 };
