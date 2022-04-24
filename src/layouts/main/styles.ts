@@ -29,5 +29,3 @@ export const Main = styled('main')({
 export const Navigation = styled('nav')({
   width: '20%',
 });
-
-export const Footer = styled('footer')({});

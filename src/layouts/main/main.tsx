@@ -14,7 +14,6 @@ export const MainLayout = ({ children }: IProps) => (
         <S.Header><Header /></S.Header>
         <S.Main>{children}</S.Main>
       </S.Body>
-      <S.Footer></S.Footer>
     </S.Container>
   </S.Background>
 );
