@@ -9,6 +9,7 @@ export const Container = styled('div')({
   maxWidth: '1200px',
   margin: '0 auto',
   display: 'flex',
+  fontFamily: 'Lato'
 });
 
 export const Header = styled('header')({

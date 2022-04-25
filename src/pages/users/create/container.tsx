@@ -1,8 +1,7 @@
-import { Button, TextField } from '@mui/material';
-import { DatePicker, LocalizationProvider } from '@mui/x-date-pickers';
-import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns';
+import { Button } from '@mui/material';
 import { useTranslation } from 'react-i18next';
 
+import { FormGroupDate, FormGroupInput } from './form-group';
 import { useForm } from './hooks';
 import * as S from './styles';
 
@@ -17,89 +16,77 @@ export const UserCreate = () => {
     cleanForm,
   } = useForm();
 
-  const findError = (fieldName: string): string | undefined => errors.find(err => err.path === fieldName)?.message;
-
   return (
     <S.Form>
       <S.FormRow>
         <S.FormColumn>
-          <S.FormGroup>
-            <TextField
-              name="firstName"
-              label={t('First name')}
-              value={formObject.firstName}
-              helperText={findError('firstName')}
-              error={!!findError('firstName')}
-              onChange={handleInputChange}
-            />
-          </S.FormGroup>
-          <S.FormGroup>
-            <TextField
-              name="email"
-              label={t('Email')}
-              value={formObject.email}
-              helperText={findError('email')}
-              error={!!findError('email')}
-              onChange={handleInputChange}
-            />
-          </S.FormGroup>
-          <S.FormGroup>
-            <LocalizationProvider dateAdapter={AdapterDateFns}>
-              <DatePicker
-                label={t('Birthdate')}
-                value={formObject.birthdate}
-                onChange={handleDateChange}
-                renderInput={(params) => (
-                  <TextField
-                    {...params}
-                    name="birthdate"
-                    helperText={findError('birthdate')}
-                    error={!!findError('birthdate')}
-                  />
-                )}
-              />
-            </LocalizationProvider>
-          </S.FormGroup>
+          <FormGroupInput
+            name="firstName"
+            errors={errors}
+            label={t('First name')}
+            placeholder={t('First name')}
+            value={formObject.firstName}
+            onChange={handleInputChange}
+          />
+          <FormGroupInput
+            name="email"
+            errors={errors}
+            label={t('Email')}
+            placeholder={t('Email')}
+            value={formObject.email}
+            onChange={handleInputChange}
+          />
+          <FormGroupDate
+            name="birthdate"
+            errors={errors}
+            label={t('Birthdate')}
+            placeholder={t('Birthdate')}
+            value={formObject.birthdate}
+            onChange={handleDateChange}
+          />
         </S.FormColumn>
         <S.FormColumn>
-          <S.FormGroup>
-            <TextField
-              name="lastName"
-              label={t('Last name')}
-              helperText={findError('lastName')}
-              error={!!findError('lastName')}
-              value={formObject.lastName}
-              onChange={handleInputChange}
-            />
-          </S.FormGroup>
-          <S.FormGroup>
-            <TextField
-              name="phone"
-              label={t('Phone')}
-              helperText={findError('phone')}
-              error={!!findError('phone')}
-              value={formObject.phone}
-              onChange={handleInputChange}
-            />
-          </S.FormGroup>
+          <FormGroupInput
+            name="lastName"
+            errors={errors}
+            label={t('Last name')}
+            placeholder={t('Last name')}
+            value={formObject.lastName}
+            onChange={handleInputChange}
+          />
+          <FormGroupInput
+            name="phone"
+            errors={errors}
+            label={t('Phone')}
+            placeholder={t('Phone')}
+            value={formObject.phone}
+            onChange={handleInputChange}
+          />
         </S.FormColumn>
       </S.FormRow>
       <S.FormRow>
-        <S.FormGroup>
-          <TextField
-            name="about"
-            label={t('About')}
-            helperText={findError('about')}
-            error={!!findError('about')}
-            value={formObject.about}
-            onChange={handleInputChange}
-          />
-        </S.FormGroup>
+        <FormGroupInput
+          name="about"
+          errors={errors}
+          label={t('About')}
+          placeholder={t('About')}
+          value={formObject.about}
+          onChange={handleInputChange}
+        />
       </S.FormRow>
       <S.FormRow>
         <S.FormGroupSubmit>
-          <Button onClick={cleanForm}>{t('Clean')}</Button>
-          <Button onClick={handleSubmit}>{t('Submit')}</Button>
+          <Button
+            variant="outlined"
+            onClick={cleanForm}>
+            {t('Clean')}
+          </Button>
+          <Button
+            variant="contained"
+            color="primary"
+            onClick={handleSubmit}>
+            {t('Submit')}
+          </Button>
         </S.FormGroupSubmit>
       </S.FormRow>
     </S.Form>

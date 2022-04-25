@@ -18,11 +18,12 @@ export const FormColumn = styled('div')({
   flexDirection: 'column'
 });
 
-export const FormGroup = styled('div')({
-  margin: '0 0 15px 0',
-});
-
 export const FormGroupSubmit = styled('div')({
+  width: '100%',
   display: 'flex',
-  jsutifyContent: 'flex-end'
+  justifyContent: 'flex-end',
+
+  '& > button': {
+    margin: '0 0 0 15px',
+  }
 });
