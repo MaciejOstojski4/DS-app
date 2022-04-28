@@ -13,5 +13,7 @@
   "Phone is required": "Phone is required",
   "Welcome": "Welcome {{firstName}}!",
   "Personal details": "Personal details",
-  "Contact details": "Contact details"
+  "Contact details": "Contact details",
+  "File is too big": "File is too big",
+  "File extension is wrong": "File extension is wrong"
 }

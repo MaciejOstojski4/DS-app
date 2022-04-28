@@ -1,6 +1,6 @@
 import * as yup from 'yup';
 
-import { PHONE_REGEX } from '../../../constants/regexes';
+import { IMAGES_TYPES_REGEX, PHONE_REGEX } from '../../../constants/regexes';
 import i18n from '../../../i18n';
 
 export const validationSchema = yup.object().shape({
@@ -17,4 +17,9 @@ export const validationSchema = yup.object().shape({
     .date()
     .nullable()
     .required(i18n.t('users:Birthdate is required')),
+});
+
+export const validationFileSchema = yup.object().shape({
+  type: yup.string().matches(IMAGES_TYPES_REGEX, i18n.t('users:File extension is wrong')),
+  size: yup.number().lessThan(5, i18n.t('users:File is too big'))
 });

@@ -1,7 +1,7 @@
 import { Button } from '@mui/material';
 import { useTranslation } from 'react-i18next';
 
-import { FormGroupDate, FormGroupInput } from './form-group';
+import { FormGroupAvatar, FormGroupDate, FormGroupInput } from './form-group';
 import { useForm } from './hooks';
 import * as S from './styles';
 
@@ -11,6 +11,7 @@ export const UserCreate = () => {
     formObject,
     errors,
     handleInputChange,
+    handleFileChange,
     handleDateChange,
     handleSubmit,
     cleanForm,
@@ -18,6 +19,16 @@ export const UserCreate = () => {
 
   return (
     <S.Form>
+      <S.FormRow>
+        <FormGroupAvatar
+          name="avatar"
+          errors={errors}
+          label={t('Avatar')}
+          value={formObject.avatar}
+          placeholder={t('Avatar')}
+          onChange={handleFileChange}
+        />
+      </S.FormRow>
       <S.FormRow>
         <S.FormColumn>
           <FormGroupInput
