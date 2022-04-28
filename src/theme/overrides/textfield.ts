@@ -6,6 +6,9 @@ export const DSTextField = {
       '& .MuiInputBase-root': {
         height: '40px',
       },
+      '& div.MuiInputBase-multiline': {
+        height: 'unset',
+      },
       '& .Mui-focused fieldset.MuiOutlinedInput-notchedOutline': {
         borderColor: props.theme.palette.cyan[900],
       }

@@ -8,6 +8,8 @@ interface Props {
   placeholder: string;
   name: string;
   errors: ValidationError[];
+  multiline?: boolean;
+  minRows?: number;
   onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
@@ -17,6 +19,8 @@ export const FormGroupInput = ({
   placeholder,
   name,
   errors,
+  multiline,
+  minRows,
   onChange
 }: Props) => {
 
@@ -29,6 +33,8 @@ export const FormGroupInput = ({
         name={name}
         placeholder={placeholder}
         value={value}
+        minRows={minRows}
+        multiline={multiline}
         helperText={findError('firstName')}
         error={!!findError('firstName')}
         onChange={onChange}

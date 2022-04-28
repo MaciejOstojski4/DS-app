@@ -15,6 +15,7 @@ export const validationSchema = yup.object().shape({
   about: yup.string().required(i18n.t('users:About is required')),
   birthdate: yup
     .date()
+    .max(new Date())
     .nullable()
     .required(i18n.t('users:Birthdate is required')),
 });

@@ -1,12 +1,12 @@
 import { useTranslation } from 'react-i18next';
-import { useSelector } from 'react-redux';
 
+import { useAppSelector } from '../../../../app/hooks';
 import { selectUser } from '../../redux/selectors';
 import * as S from './styles';
 
 export const Avatar = () => {
   const { t } = useTranslation('users');
-  const user = useSelector(selectUser);
+  const user = useAppSelector(selectUser);
 
   if (!user) return <></>;
 

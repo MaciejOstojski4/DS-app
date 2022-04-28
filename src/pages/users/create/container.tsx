@@ -80,6 +80,8 @@ export const UserCreate = () => {
           name="about"
           errors={errors}
           label={t('About')}
+          multiline
+          minRows={3}
           placeholder={t('About')}
           value={formObject.about}
           onChange={handleInputChange}

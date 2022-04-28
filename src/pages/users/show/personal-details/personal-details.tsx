@@ -1,12 +1,12 @@
 import { format } from 'date-fns';
-import { useSelector } from 'react-redux';
 
+import { useAppSelector } from '../../../../app/hooks';
 import { selectUser } from '../../redux/selectors';
 import { Text } from '../text';
 import * as S from './styles';
 
 export const PersonalDetails = () => {
-  const user = useSelector(selectUser);
+  const user = useAppSelector(selectUser);
 
   return (
     <S.PersonalDetails>

@@ -1,4 +1,3 @@
-import { useSelector } from 'react-redux';
 import { useTranslation } from 'react-i18next';
 import { compile } from 'path-to-regexp';
 
@@ -7,10 +6,11 @@ import { routes } from '../../../routing/routes';
 import { HeaderItem } from './header-item';
 import * as S from './styles';
 import { UserName } from './user-name';
+import { useAppSelector } from '../../../app/hooks';
 
 export const Header = () => {
   const { t } = useTranslation('users');
-  const user = useSelector(selectUser);
+  const user = useAppSelector(selectUser);
 
   return (
     <S.Header isUserCreated={!!user}>

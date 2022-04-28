@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { useDispatch } from 'react-redux';
 import shortid from 'shortid';
 import { useNavigate } from 'react-router-dom';
 import { compile } from 'path-to-regexp';
@@ -11,9 +10,10 @@ import { FORM_OBJECT_EMPTY } from './constants';
 import { UserCreateFormObject } from './types';
 import { validationFileSchema, validationSchema } from './validation-schema';
 import { routes } from '../../../routing/routes';
+import { useAppDispatch } from '../../../app/hooks';
 
 export const useForm = () => {
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
   const [formObject, setFormObject] = useState<UserCreateFormObject>(FORM_OBJECT_EMPTY);
   const [errors, setErrors] = useState<ValidationError[]>([]);
   const navigate = useNavigate();

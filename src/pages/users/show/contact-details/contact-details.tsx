@@ -1,13 +1,13 @@
 import { useTranslation } from 'react-i18next';
-import { useSelector } from 'react-redux';
 
+import { useAppSelector } from '../../../../app/hooks';
 import { selectUser } from '../../redux/selectors';
 import { Text } from '../text';
 import * as S from './styles';
 
 export const ContactDetails = () => {
   const { t } = useTranslation('users');
-  const user = useSelector(selectUser);
+  const user = useAppSelector(selectUser);
 
   return (
     <S.ContactDetails>
