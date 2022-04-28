@@ -13,8 +13,8 @@ import { selectUser } from '../../../pages/users/redux/selectors';
 export const Navigation = () => {
   const { t } = useTranslation('users');
   const { pathname } = useLocation();
-  const { create: createPath, show: showPath } = routes.users;
   const user = useSelector(selectUser);
+  const { create: createPath, show: showPath } = routes.users;
 
   const isActive = (path: string): boolean => {
     return !!matchPath(path, pathname);

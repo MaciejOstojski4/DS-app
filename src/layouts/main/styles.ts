@@ -1,4 +1,5 @@
 import { styled } from '@mui/system';
+
 import { LARGE_DEVICES, MEDIUM_DEVICES, SMALL_DEVICES } from '../../theme/responsive-breakpoints';
 
 export const Background = styled('div')(({ theme: { palette } }) => ({
