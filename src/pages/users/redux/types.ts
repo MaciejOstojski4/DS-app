@@ -1,6 +1,7 @@
 import { IEntity } from '../../../constants/types';
 
 export interface User extends IEntity {
+  avatar: string;
   firstName: string;
   lastName: string;
   email: string;

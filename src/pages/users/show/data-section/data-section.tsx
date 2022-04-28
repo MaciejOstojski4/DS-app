@@ -1,13 +1,13 @@
 import * as S from './styles';
 
 interface Props {
-  title: string;
   children: React.ReactNode;
+  title?: string;
 }
 
 export const DataSection = ({ title, children }: Props) => (
   <S.Group>
-    <S.Title fontWeight={700}>{title}</S.Title>
+    {title && <S.Title fontWeight={700}>{title}</S.Title>}
     <S.Wrapper>
       {children}
     </S.Wrapper>
