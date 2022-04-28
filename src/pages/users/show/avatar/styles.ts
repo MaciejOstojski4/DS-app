@@ -6,4 +6,5 @@ export const AvatarImage = styled('img')({
   objectFit: 'cover',
   borderRadius: '6px',
   margin: '0 0 30px 0',
+  contentVisibility: 'auto'
 });
