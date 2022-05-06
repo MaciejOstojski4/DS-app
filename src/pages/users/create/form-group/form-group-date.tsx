@@ -32,6 +32,7 @@ export const FormGroupDate = ({
         <DatePicker
           value={value}
           onChange={onChange}
+          maxDate={new Date()}
           renderInput={(params) => (
             <TextField
               {...params}

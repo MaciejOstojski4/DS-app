@@ -10,7 +10,6 @@ export const Form = styled('form')({
 
 export const FormRow = styled('div')({
   display: 'flex',
-  justifyContent: 'space-between',
   width: '100%',
   padding: '0 30px',
 
@@ -21,7 +20,14 @@ export const FormRow = styled('div')({
 
 export const FormColumn = styled('div')({
   display: 'flex',
-  flexDirection: 'column'
+  flexDirection: 'column',
+  margin: '0 15px',
+  width: '350px',
+
+  [`@media (max-width: ${SMALL_DEVICES})`]: {
+    width: 'auto',
+    margin: '0',
+  }
 });
 
 export const FormGroupSubmit = styled('div')({

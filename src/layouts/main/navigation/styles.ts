@@ -5,7 +5,7 @@ export const Navigation = styled('div')(({ theme: { palette } }) => ({
   flexDirection: 'column',
   padding: '15px 0 30px',
   backgroundColor: palette.grey[900],
-  minHeight: '100vh',
+  height: '100%',
 }));
 
 export const NavList = styled('ul')({

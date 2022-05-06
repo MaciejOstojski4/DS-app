@@ -35,8 +35,8 @@ export const FormGroupInput = ({
         value={value}
         minRows={minRows}
         multiline={multiline}
-        helperText={findError('firstName')}
-        error={!!findError('firstName')}
+        helperText={findError(name)}
+        error={!!findError(name)}
         onChange={onChange}
       />
     </S.FormGroup>

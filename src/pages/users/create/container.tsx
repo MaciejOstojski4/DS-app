@@ -20,14 +20,16 @@ export const UserCreate = () => {
   return (
     <S.Form>
       <S.FormRow>
-        <FormGroupAvatar
-          name="avatar"
-          errors={errors}
-          label={t('Avatar')}
-          value={formObject.avatar}
-          placeholder={t('Avatar')}
-          onChange={handleFileChange}
-        />
+        <S.FormColumn>
+          <FormGroupAvatar
+            name="avatar"
+            errors={errors}
+            label={t('Avatar')}
+            value={formObject.avatar}
+            placeholder={t('Avatar')}
+            onChange={handleFileChange}
+          />
+        </S.FormColumn>
       </S.FormRow>
       <S.FormRow>
         <S.FormColumn>
@@ -76,16 +78,18 @@ export const UserCreate = () => {
         </S.FormColumn>
       </S.FormRow>
       <S.FormRow>
-        <FormGroupInput
-          name="about"
-          errors={errors}
-          label={t('About')}
-          multiline
-          minRows={3}
-          placeholder={t('About')}
-          value={formObject.about}
-          onChange={handleInputChange}
-        />
+        <S.FormColumn>
+          <FormGroupInput
+            name="about"
+            errors={errors}
+            label={t('About')}
+            multiline
+            minRows={3}
+            placeholder={t('About')}
+            value={formObject.about}
+            onChange={handleInputChange}
+          />
+        </S.FormColumn>
       </S.FormRow>
       <S.FormRow>
         <S.FormGroupSubmit>
