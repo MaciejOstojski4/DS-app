@@ -42,11 +42,11 @@ export const UserCreate = () => {
             onChange={handleInputChange}
           />
           <FormGroupInput
-            name="email"
+            name="lastName"
             errors={errors}
-            label={t('Email')}
-            placeholder={t('Email')}
-            value={formObject.email}
+            label={t('Last name')}
+            placeholder={t('Last name')}
+            value={formObject.lastName}
             onChange={handleInputChange}
           />
           <FormGroupDate
@@ -60,11 +60,11 @@ export const UserCreate = () => {
         </S.FormColumn>
         <S.FormColumn>
           <FormGroupInput
-            name="lastName"
+            name="email"
             errors={errors}
-            label={t('Last name')}
-            placeholder={t('Last name')}
-            value={formObject.lastName}
+            label={t('Email')}
+            placeholder={t('Email')}
+            value={formObject.email}
             onChange={handleInputChange}
           />
           <FormGroupInput

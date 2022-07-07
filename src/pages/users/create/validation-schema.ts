@@ -17,6 +17,7 @@ export const validationSchema = yup.object().shape({
     .date()
     .nullable()
     .required(i18n.t('users:Birthdate is required')),
+  avatar: yup.string().required(i18n.t('users:Avatar is required')),
 });
 
 export const validationFileSchema = yup.object().shape({

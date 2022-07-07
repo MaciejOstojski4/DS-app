@@ -1,1 +1,1 @@
-export { UserCreate } from './container';
+export { UserCreate } from './user-create';

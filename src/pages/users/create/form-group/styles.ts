@@ -59,5 +59,8 @@ export const AvatarTextField = styled(TextField)({
     opacity: 0,
     padding: 0,
     cursor: 'pointer',
+  },
+  '& .MuiFormHelperText-root': {
+    marginLeft: '35px',
   }
 });

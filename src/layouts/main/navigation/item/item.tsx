@@ -11,8 +11,10 @@ interface Props {
 }
 
 export const Item = ({ label, to, icon, isActive }: Props) => (
-  <S.ItemLink to={to} isActive={isActive}>
-    <FontAwesomeIcon icon={icon} />
-    <S.Label isActive={isActive} fontWeight={500}>{label}</S.Label>
-  </S.ItemLink>
+  <li>
+    <S.ItemLink to={to} isActive={isActive}>
+      <FontAwesomeIcon icon={icon} />
+      <S.Label isActive={isActive} fontWeight={500}>{label}</S.Label>
+    </S.ItemLink>
+  </li>
 );

@@ -18,5 +18,6 @@
   "File extension is wrong": "File extension is wrong",
   "User avatar": "User avatar",
   "User avatar preview": "User avatar preview",
-  "Phone must be in valid format": "Phone must be in valid format"
+  "Phone must be in valid format": "Phone must be in valid format",
+  "Avatar is required": "Avatar is required"
 }

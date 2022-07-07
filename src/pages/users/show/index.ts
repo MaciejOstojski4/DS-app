@@ -1,1 +1,1 @@
-export { UserShow } from './container';
+export { UserShow } from './user-show';
